@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import "common";
+/* content */
+.content {
+    max-width: 100%;
+    &::after {
+        content: "";
+        overflow: hidden;
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .goods {
+        max-width: 1262px;
+        margin: 20px auto 0px;
+        padding: 0;
+
+        .break {
+            a {
+                font-size: 14px;
+                color: #969696;
+            }
+
+            span {
+                color: #969696;
+            }
+        }
+
+        .goods_tit {
+            margin-bottom: 36px;
+
+            h3 {
+                font-size: 22px;
+                margin-top: 38px;
+                font-weight: 100;
+            }
+        }
+
+        .subs {
+            width: 14.45%;
+            margin-right: 5.6%;
+            min-width: 173px;
+            float: left;
+
+            &::after {
+                content: "";
+                overflow: hidden;
+                display: block;
+                clear: both;
+                height: 0;
+                visibility: hidden;
+            }
+
+            .sub_list {
+                .list_tit {
+                    font-size: 16px;
+                    position: relative;
+                    margin-bottom: 8px;
+                    cursor: pointer;
+                    a{
+                        width: 11px;
+                        height: 11px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                        background: url(../images/+.png) no-repeat;
+                    }
+                    .current{
+                        background-image: url(../images/-.png);
+                    }
+                }
+
+                .list_con {
+                    display: none;
+                    li {
+                        line-height: 38px;
+                        position: relative;
+                        
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .goods_right {
+            float: right;
+            overflow: hidden;
+            width: 79.9%;
+            max-width: calc(100%-5.6%-173px);
+
+            .goods_right_tit {
+                margin-bottom: 20px;
+
+                .goods_right_left {
+                    &::after {
+                        content: "";
+                        overflow: hidden;
+                        display: block;
+                        clear: both;
+                        height: 0;
+                        visibility: hidden;
+                    }
+
+                    .goods_btn {
+                        margin-right: 25px;
+                        float: left;
+                        cursor: pointer;
+
+                        span {
+                            font-size: 14px;
+                            color: #000;
+                        }
+                    }
+                }
+
+                .goods_right_right {
+                    float: right;
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    .goods_btn {
+                        margin-right: 25px;
+                        float: right;
+                        cursor: pointer;
+
+                        span {
+                            font-size: 14px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            .shangpin {
+                .shangp {
+                    width: 100%;
+
+                    &::after {
+                        content: "";
+                        overflow: hidden;
+                        display: block;
+                        clear: both;
+                        height: 0;
+                        visibility: hidden;
+                    }
+
+                    li {
+                        float: left;
+                        width: 32.3%;
+                        margin-right: 1.55%;
+                        margin-bottom: 25px;
+
+                        .like_img {
+                            position: relative;
+                            z-index: 1;
+                            img {
+                                width: 100%;
+                            }
+
+                            .like_hover {
+                                display: none;
+
+                                .like_btn {
+                                    position: absolute;
+                                    width: 94%;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    background: #fff;
+                                    text-align: center;
+                                    display: block;
+                                    bottom: 22px;
+                                    margin-left: 3%;
+                                    left: 0;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            &:hover .like_default {
+                                display: none;
+                            }
+
+                            &:hover .like_hover {
+                                display: block;
+                            }
+
+                        }
+
+                        .like_txt {
+                            padding-bottom: 50px;
+
+                            div {
+                                &::after {
+                                    content: "";
+                                    overflow: hidden;
+                                    display: block;
+                                    clear: both;
+                                    height: 0;
+                                    visibility: hidden;
+                                }
+
+                                font-size: 14px;
+
+                                span {
+                                    float: left;
+                                }
+
+                                a {
+                                    float: right;
+                                }
+                            }
+
+                            h3 {
+                                font-size: 14px;
+                                margin: 5px 0;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    li:nth-child(3n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

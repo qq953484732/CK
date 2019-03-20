@@ -1,0 +1,296 @@
+@charset "utf-8";
+@import "common";
+/* content */
+@mixin input_max($width:99.8%) {
+    width: $width;
+    height: 20px;
+    outline: linen;
+    border: 1px solid #a1a1a1;
+    margin-bottom: 3px;
+    padding: 3px 0 3px 0;
+}
+
+.content {
+    font-size: 12px;
+    width: 960px;
+    margin: 0 auto;
+
+    &::after {
+        content: "";
+        overflow: hidden;
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+
+    h1 {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 16px;
+        padding: 23px 0;
+    }
+
+    .input_txt {
+        @include input_max();
+    }
+
+    //按钮
+    .btn_login {
+        display: block;
+        width: 70px;
+        height: 24px;
+        float: right;
+        line-height: 24px;
+        text-align: center;
+        background: #2e2e2e;
+        color: #fff;
+    }
+
+    .yzm {
+        width: 110px;
+        height: 28px;
+    }
+
+    .text p {
+        margin-bottom: 15px;
+    }
+
+    .min_input {
+        @include input_max(50%);
+    }
+
+    .min_date {
+        @include input_max(30%);
+    }
+}
+
+.con_left,
+.con_center,
+.con_right {
+    width: 282px;
+    height: 874px;
+    padding: 0 19px;
+    float: left;
+}
+
+.con_left {
+    background: #f1f1f1;
+}
+
+.con_center {
+    border-right: 1px solid #f1f1f1;
+}
+
+.con_right {
+    width: 280px;
+}
+
+.tel,
+.pass {
+    height: 75px;
+}
+
+.error {
+    color: #b62d32;
+    line-height: 17px;
+    height: 17px;
+    display: block;
+    display: none;
+}
+
+.regError {
+    position: absolute;
+    left: 0;
+}
+
+.span_a {
+    display: block;
+    height: 17px;
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 2px;
+}
+
+.checkbox {
+    width: 100%;
+    padding-bottom: 10px;
+
+    span {
+        >a {
+            background: url(../images/checkbg.jpg) no-repeat;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin-right: 3px;
+        }
+
+        .current {
+            background: url(../images/right.jpg) no-repeat;
+        }
+    }
+}
+
+.loginIn {
+    display: block;
+    width: 70px;
+    height: 24px;
+    background: #2e2e2e;
+    color: white;
+    font-size: 14px;
+    float: right;
+    text-align: center;
+}
+
+.hands {
+    margin-top: 52px;
+
+    &>li {
+        &:nth-child(2) {
+            &>a {
+                &:first-child {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*常规验证码*/
+.code {
+    font-family: Arial;
+    font-style: italic;
+    font-size: 18px;
+    border: 0;
+    padding: 2px 3px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    float: right;
+    cursor: pointer;
+    width: 60px;
+    height: 20px;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 50px;
+
+}
+
+#txyzm {
+    position: relative;
+    z-index: 1;
+}
+
+#sx {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sex {
+    height: 44px;
+
+    @for $i from 2 through 3 {
+        span:nth-child(#{$i}) {
+            display: block;
+            float: left;
+            width: 40%;
+
+            a {
+                width: 12px;
+                height: 11px;
+                display: inline-block;
+                background: url(../images/radio-bg.png) no-repeat;
+                margin-right: 3px;
+            }
+
+            .current {
+                background: url(../images/radio-bg-current.png) no-repeat;
+            }
+        }
+    }
+
+}
+
+.reg {
+    padding-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.min_date {
+    height: 24px;
+    text-indent: 10px;
+}
+
+// regOk
+.regOk,
+#yzOk {
+    height: 550px;
+    width: 676px;
+    margin: 0 auto;
+    padding: 0 0 0 115px;
+    display: none;
+    h2{
+        padding-top: 50px;
+        font-size: 22px;
+        position: relative;
+        line-height: 22px;
+        img{
+            position: absolute;
+            left: -50px;
+        }
+    }
+    .p1{
+        font-size: 14px;
+        line-height: 14px;
+        padding-bottom: 10px;
+        padding-top: 29px;
+    }
+    .p2{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .yzOk_a,.m{
+        color: #9e9e9e;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 6px 0 35px 0;
+        a{
+            color: #9e9e9e;
+            font-size: 14px;
+            line-height: 14px;
+            text-decoration: underline;
+        }
+    }
+    .yzOk_vip{
+        color: #b62d32;
+        font-size: 14px;
+        padding-bottom: 10px;
+        display: block;
+        padding-top: 36px;
+    }
+    .yzOk_btn{
+        width: 178px;
+        height: 28px;
+        display: block;
+        background: #2e2e2e;
+        text-align: center;
+        a{
+            color: white;
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+}
+// yzok
+#yzOk{
+    h2{
+        font-weight: 100;
+    }
+    display: none;
+}

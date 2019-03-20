@@ -1,0 +1,249 @@
+@charset "utf-8";
+@import "common";
+
+@mixin cle (){
+    &::after {
+        content: "";
+        overflow: hidden;
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+}
+// content
+.content{
+    max-width: 1262px;
+    min-width: 960px;
+    margin:0 auto;
+    .item_tit {
+        margin-bottom: 18px;
+        font-size: 14px;
+        color:#969696;
+        a{
+            font-size: 14px;
+            color:#969696;
+        }
+    }
+    .items {
+        @include cle();
+        position: relative;
+        .items_left {
+            width: 59.1%;
+            position: relative;
+            .items_list {
+                width: 103px;
+                height: 438px;
+                padding-right: 20px;
+                float: left;
+                overflow: hidden;
+                .ims {
+                    width: 100%;
+                    li{
+                        width: 100%;
+                        cursor: pointer;
+                        height: 136px;
+                        margin-bottom: 10px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                } 
+            }
+            .liulan{
+                position: absolute;
+                top: 438px;
+                width: 103px;
+                text-align: center;
+                img{
+                    margin: 0 auto;
+                    cursor: pointer;
+                }
+                span{
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+            .img_big{
+                // background: red;    
+                // position: absolute;
+                // right: 0;
+                // top: 0;
+                float: right;
+                width: 83.3%;
+                ul{
+                    width: 100%;
+                    li{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .items_right{
+            width: 40.09%;
+            position: absolute;
+            top: 0;
+            left: 59.1%;
+            &>div{
+                padding-left: 74px;
+                .shop_xx{
+                    font-size: 14px;
+                    .shop_pingjia{
+                        line-height: 18px;
+                        width: 85%;
+                        position: relative;
+                        font-weight: bold;
+                    }
+                    .shop_name{
+                        line-height: 18px;
+                        width: 90%;
+                    }
+                    .shop_name2{
+                        padding-top: 15px;
+                        line-height: 22px;
+                        font-weight: 600;
+                    }
+                    .shop_price{
+                        font-weight: 600;
+                        height: 51px;
+                        line-height: 51px;
+                        padding-bottom: 8px;
+                        font-weight: 600;
+                        border-bottom: 1px solid #ccc;
+                        span:last-child{
+                            text-decoration: line-through;
+                        }
+                    }
+                    .colll{
+                        padding: 17px 0 5px 0;
+                        span{
+                            line-height: 24px;
+                        }
+                    }
+                    .shop_color2{
+                        span{
+                            float: left;
+                            text-align: center;
+                            display: inline-block;
+                            width: 18px;
+                            height: 18px;
+                            border: 2px solid #000000;      
+                            img{
+                                // vertical-align: middle;
+                                width: 16px;
+                                height: 16px;
+                                margin-top: 1px;
+                            }
+                            .current{
+                                width: 18px;
+                                height: 18px;
+                                margin-top: 0px;
+                            }
+                        }
+                        span:first-child{
+                                margin: 0 6px 6px 0;
+                        }
+                        
+                    }
+                    .shop_size{
+                        clear: both;
+                        p{
+                            line-height: 32px;
+                            height: 32px;
+                        }
+                        span{
+                            display: inline-block;
+                            width: 64px;
+                            height: 38px;
+                            line-height: 38px;
+                            border: 1px solid #bebebe;
+                            color: #000;
+                            text-align: center;
+                            cursor: pointer;
+                            margin:0 4.5px 9px;
+                        }
+                        span:nth-child(2){
+                            margin-left: 0;
+                        }
+                    }
+                    .shop_nums{
+                        // float: left;
+                        margin-top: 13px;
+                        @include cle();
+                        position: relative;
+                        .shop_xz {
+                            float: left;
+                            padding: 0 7px;
+                            width: 38.1%;
+                            height: 40px;
+                            border: 1px solid #bebebe;
+                            box-sizing: border-box;
+                            cursor: pointer;
+
+                            span {
+                                float: left;
+                                line-height: 38px;
+                            }
+
+                            .nums_sj {
+                                float: right;
+                                display: block;
+                                width: 0px;
+                                height: 0px;
+                                border: 4.5px solid transparent;
+                                border-top-color: #000000;
+                                margin-top: 16px;
+                            }
+
+                        }
+                        .nums_xz {
+                            display: none;
+                            position: absolute;
+                            border: 1px solid #bebebe;
+                            background: white;
+                            z-index: 10000;
+                             width: 38.1%;
+                             box-sizing: border-box;
+                             top: 40px;
+                            li {
+                               width: 100%;
+                                height: 38px;
+                                line-height: 38px;
+                                padding: 0 7px;
+                                box-sizing: border-box;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background: #F1F1F1;
+                                }
+                            }
+                        }
+                        #join_car{
+                            float: right;
+                            width: 59%;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            background: #bfbfbf;
+                            cursor: not-allowed;
+                        }
+                    }
+                    .fenxiang{
+                        padding-top: 129px;
+                        width: 100%;
+                        span:first-child{
+                            float: left;
+                        }
+                        span:last-child{
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

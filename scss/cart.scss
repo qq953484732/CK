@@ -1,0 +1,617 @@
+@charset "utf-8";
+@import "common";
+
+/* content */
+.content {
+    max-width: 1262px;
+    padding: 50px 30px 0;
+    margin: 0 auto;
+
+    .not_coo {
+        h2 {
+            font-size: 22px;
+            line-height: 38px;
+            font-weight: 100;
+        }
+
+        span {
+            display: block;
+            margin: 30px 0 0;
+            width: 230px;
+            height: 40px;
+            background: #000;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .cart_tit {
+        display: none;
+        clear: both;
+
+        &::after {
+            content: "";
+            overflow: hidden;
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        }
+
+        .tit_left {
+            float: left;
+
+            h2 {
+                font-size: 22px;
+                font-weight: normal;
+                font-family: "微软雅黑",
+                    "microsoft yahei";
+            }
+
+            .cart_txt {
+                margin: 40px 0 0;
+
+                p {
+                    font-size: 16px;
+                    line-height: 14px;
+                }
+            }
+
+            .car_vip {
+                height: 30px;
+                line-height: 30px;
+                margin-bottom: 10px;
+                overflow: hidden;
+                font-size: 16px;
+
+                ul {
+                    margin-top: 0px;
+                    // position: relative;
+                    // li:first-child{
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0;
+                    // }
+                    // li:nth-child(2){
+                    //     position: absolute;
+                    //     top: 30;
+                    //     left: 0;
+                    // }
+                }
+            }
+        }
+
+        .tit_right {
+            float: right;
+
+            p:first-child {
+                font-size: 16px;
+                line-height: 24px;
+                text-align: right;
+            }
+
+            p:nth-child(2) {
+                text-align: right;
+
+                a {
+                    display: inline-block;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #969696;
+                    border-bottom: 1px solid #969696;
+                }
+
+            }
+
+            .car_btn {
+                margin: 26px 0 47px;
+
+                span {
+                    display: block;
+                    width: 382px;
+                    height: 38px;
+                    border: 1px solid black;
+                    line-height: 38px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    text-align: center;
+                    margin-bottom: 14px;
+                }
+
+                span:first-child {
+                    background: black;
+                    color: white;
+                }
+
+                span:nth-child(2) {
+                    background: #bfbfbf;
+                    color: white;
+                    border: 0;
+                    display: none;
+                }
+
+                span:nth-child(3) {
+                    background: white;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .cart_lis {
+        width: 100%;
+        display: none;
+
+        .list_tit {
+            border-bottom: 1px solid #cccccc;
+
+            &::after {
+                content: "";
+                overflow: hidden;
+                display: block;
+                clear: both;
+                height: 0;
+                visibility: hidden;
+            }
+
+            &>div {
+                font-size: 16px;
+                line-height: 38px;
+                float: left;
+            }
+
+            .qx {
+                width: 12%;
+                padding: 0 20px 0 24px;
+                position: relative;
+                box-sizing: border-box;
+
+                div {
+                    position: absolute;
+                    left: 0px;
+                    top: 12px;
+                    background: url(../images/icon.png);
+                    background-position: -40px -95px;
+                    width: 14px;
+                    height: 14px;
+                    cursor: pointer;
+                }
+
+                .current {
+                    background-position: -20px -95px;
+                }
+            }
+
+            .sp {
+                width: 30%;
+            }
+
+            .fw {
+                width: 27%;
+            }
+
+            .jg {
+                width: 16%;
+            }
+
+            .xj {
+                width: 15%;
+                text-align: right;
+            }
+        }
+    }
+
+    .lis_shop {
+        font-size: 14px;
+
+        .dx {
+
+            background: url(../images/icon.png);
+            background-position: -40px -95px;
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        .current {
+            background-position: -20px -95px;
+        }
+
+        &>li {
+            border-bottom: 1px solid #cccccc;
+
+            &::after {
+                content: "";
+                overflow: hidden;
+                display: block;
+                clear: both;
+                height: 0;
+                visibility: hidden;
+            }
+
+            padding: 30px 0;
+
+            &>div {
+                box-sizing: border-box;
+                float: left;
+            }
+
+            .col_1 {
+                width: 12%;
+                position: relative;
+                padding: 0 20px 0 24px;
+
+                a {
+                    width: 100%;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .col_2 {
+                width: 30%;
+
+                .good_xx {
+                    max-width: 196px;
+
+                    p {
+                        line-height: 20px;
+                    }
+
+                    .goods_color {
+                        margin-top: 10px;
+                    }
+
+                    .goods_num {
+                        margin-top: 5px;
+                        position: relative;
+
+                        .nums {
+                            padding: 0 7px;
+                            width: 86px;
+                            height: 40px;
+                            border: 1px solid #bebebe;
+                            box-sizing: border-box;
+                            cursor: pointer;
+
+                            span {
+                                float: left;
+                                line-height: 38px;
+                            }
+
+                            .nums_sj {
+                                float: right;
+                                display: block;
+                                width: 0px;
+                                height: 0px;
+                                border: 4.5px solid transparent;
+                                border-top-color: #000000;
+                                margin-top: 16px;
+                            }
+
+                        }
+
+                        .nums_xz {
+                            display: none;
+                            position: absolute;
+                            border: 1px solid #bebebe;
+                            background: white;
+                            z-index: 10000;
+
+                            li {
+                                width: 84px;
+                                height: 38px;
+                                line-height: 38px;
+                                padding: 0 7px;
+                                box-sizing: border-box;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background: #F1F1F1;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .goods_change {
+                        margin-top: 5px;
+
+                        a {
+                            margin-right: 20px;
+                            font-size: 14px;
+                            line-height: 18px;
+                            border-bottom: 1px solid #969696;
+                            color: #969696;
+                        }
+                    }
+                }
+            }
+
+            .col_3 {
+                width: 27%;
+            }
+
+            .col_4 {
+                width: 16%;
+
+                p {
+                    span {
+                        margin: 0 8px 0 0;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    span:first-child {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+
+            .col_5 {
+                width: 15%;
+                text-align: right;
+            }
+        }
+    }
+
+    .car_bottom {
+        padding: 43px 384px 0 0;
+        min-height: 950px;
+        position: relative;
+
+        h2 {
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 56px;
+        }
+
+        ul {
+            width: 85.4%;
+
+            &::after {
+                content: "";
+                overflow: hidden;
+                display: block;
+                clear: both;
+                height: 0;
+                visibility: hidden;
+            }
+
+            li:nth-child(odd) {
+                margin-right: 2.6%;
+            }
+
+            li {
+                float: left;
+                width: 48.7%;
+                margin-bottom: 25px;
+
+                .like_img {
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .like_default {}
+
+                    .like_hover {
+                        display: none;
+
+                        .like_btn {
+                            position: absolute;
+                            width: 94%;
+                            height: 40px;
+                            line-height: 40px;
+                            background: #fff;
+                            text-align: center;
+                            display: block;
+                            bottom: 22px;
+                            margin-left: 3%;
+                            left: 0;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &:hover .like_default {
+                        display: none;
+                    }
+
+                    &:hover .like_hover {
+                        display: block;
+                    }
+
+                }
+
+                .like_txt {
+                    div {
+                        &::after {
+                            content: "";
+                            overflow: hidden;
+                            display: block;
+                            clear: both;
+                            height: 0;
+                            visibility: hidden;
+                        }
+
+                        font-size: 14px;
+
+                        span {
+                            float: left;
+                        }
+
+                        a {
+                            float: right;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 14px;
+                        margin: 5px 0;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+        }
+
+        .car_dd {
+            position: absolute;
+            right: 0;
+            top: 43px;
+            width: 384px;
+            display: none;
+
+            .car_dd_yh {
+                width: 100%;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #ccc;
+
+                h3 {
+                    line-height: 50px;
+                    font-weight: 100;
+                    color: #000;
+                }
+
+                .youhui {
+                    border: 1px solid #cccccc;
+
+                    input {
+                        width: 302px;
+                        color: #000;
+                        padding: 0 10px;
+                        font-size: 14px;
+                        line-height: 1;
+                        height: 40px;
+                        border: 0;
+                        outline: none;
+                    }
+
+                    div {
+                        float: right;
+                        text-align: center;
+                        line-height: 40px;
+                        font-size: 14px;
+                        width: 60px;
+                        color: #bbb;
+                        cursor: not-allowed;
+                    }
+                }
+
+            }
+
+            .car_info {
+                padding-bottom: 30px;
+                border-bottom: 1px solid #cccccc;
+
+                &>h3 {
+                    line-height: 80px;
+                    font-size: 22px;
+                    height: 80px;
+                    font-weight: 100;
+                }
+
+                p {
+                    line-height: 27px;
+                    font-size: 14px;
+
+                    span {
+                        float: right;
+                    }
+
+                }
+            }
+
+            .car_jiesuan {
+                &>h3 {
+                    line-height: 80px;
+                    font-size: 22px;
+                    height: 80px;
+                    font-weight: 100;
+
+                    span {
+                        float: right;
+                    }
+                }
+
+                .car_btn {
+
+                    span {
+                        display: block;
+                        width: 382px;
+                        height: 38px;
+                        border: 1px solid black;
+                        line-height: 38px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        text-align: center;
+                        margin-bottom: 14px;
+                    }
+
+                    span:first-child {
+                        background: black;
+                        color: white;
+                    }
+
+                    span:nth-child(2) {
+                        background: #bfbfbf;
+                        color: white;
+                        border: 0;
+                        display: none;
+                    }
+
+                    span:nth-child(3) {
+                        background: white;
+                        color: black;
+                    }
+                }
+            }
+
+            .car_fukuan {
+                dl {
+                    dt {
+                        margin: 20px 0 15px;
+
+                        a {
+                            font-size: 14px;
+                            color: #000;
+                            border-bottom: 1px solid black;
+                        }
+                    }
+
+                    dd {
+                        a {
+                            border: 1px solid #ededed;
+                            display: inline-block;
+                            width: 118px;
+                            height: 38px;
+                            line-height: 38px;
+                            text-align: center;
+                            overflow: hidden;
+
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
